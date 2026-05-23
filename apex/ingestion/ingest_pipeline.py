@@ -1,7 +1,7 @@
 """
 ingestion/ingest_pipeline.py
 
-The entry point for all ingestion. Run this to load documents into PitWall.
+The entry point for all ingestion. Run this to load documents into Apex.
 
 Usage:
     python -m ingestion.ingest_pipeline                    # ingest everything
@@ -38,19 +38,19 @@ def run_ingestion(source: str = "all", clear: bool = False) -> dict:
     Returns:
         dict with counts per source
     """
-    print("\n=== PitWall Ingestion Pipeline ===\n")
+    print("\n=== Apex Ingestion Pipeline ===\n")
 
     store = VectorStore(db_path=CHROMA_DB_PATH)
 
     if clear:
         print("Clearing existing data...")
         # Recreate the collection by deleting and re-creating
-        store.client.delete_collection("pitwall_docs")
+        store.client.delete_collection("Apex_docs")
         from chromadb.utils import embedding_functions
         from config import EMBED_MODEL
         ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
         store.collection = store.client.get_or_create_collection(
-            name="pitwall_docs",
+            name="Apex_docs",
             embedding_function=ef,
             metadata={"hnsw:space": "cosine"},
         )
@@ -115,7 +115,7 @@ def run_ingestion(source: str = "all", clear: bool = False) -> dict:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="PitWall ingestion pipeline")
+    parser = argparse.ArgumentParser(description="Apex ingestion pipeline")
     parser.add_argument(
         "--source",
         choices=["all", "markdown", "github", "pdf"],

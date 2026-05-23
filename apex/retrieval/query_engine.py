@@ -1,7 +1,7 @@
 """
 retrieval/query_engine.py
 
-The brain of PitWall. Given a user question:
+The brain of Apex. Given a user question:
 1. Search the vector store for relevant chunks
 2. Format them as context
 3. Send to Claude with the answer prompt

@@ -1,7 +1,7 @@
 """
 api/main.py
 
-FastAPI backend for PitWall.
+FastAPI backend for Apex.
 
 Endpoints:
   POST /query          — ask a question, get an answer + sources
@@ -27,7 +27,7 @@ from ingestion.vector_store import VectorStore
 from config import ANTHROPIC_API_KEY, CHROMA_DB_PATH
 
 app = FastAPI(
-    title="PitWall API",
+    title="Apex API",
     description="AI knowledge assistant for motorsport engineering teams",
     version="1.0.0",
 )
@@ -113,7 +113,7 @@ def serve_frontend():
     index_path = os.path.join(FRONTEND_DIR, "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path)
-    return {"message": "PitWall API is running. Frontend not found — check frontend/ folder."}
+    return {"message": "Apex API is running. Frontend not found — check frontend/ folder."}
 
 
 @app.get("/admin")

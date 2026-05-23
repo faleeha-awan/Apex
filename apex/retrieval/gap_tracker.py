@@ -5,7 +5,7 @@ When Claude can't answer a question from the knowledge base, we log it.
 These become "knowledge gaps" — questions the team's documentation doesn't cover.
 The admin panel surfaces these so someone can write the missing doc.
 
-This is the feature that separates PitWall from a generic RAG demo.
+This is the feature that separates Apex from a generic RAG demo.
 """
 import sqlite3
 import os

@@ -11,7 +11,7 @@ from ingestion.chunker import chunk_text, Chunk
 
 def ingest_markdown_file(
     filepath: str,
-    base_url: str = "https://github.com/yourusername/pitwall/blob/main/",
+    base_url: str = "https://github.com/yourusername/Apex/blob/main/",
 ) -> list[Chunk]:
     """
     Read a markdown/text file, chunk it, return Chunk objects.
@@ -43,7 +43,7 @@ def ingest_markdown_file(
 
 def ingest_markdown_folder(
     folder_path: str,
-    base_url: str = "https://github.com/yourusername/pitwall/blob/main/docs/",
+    base_url: str = "https://github.com/yourusername/Apex/blob/main/docs/",
 ) -> list[Chunk]:
     """
     Ingest all .md and .txt files in a folder.

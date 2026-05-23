@@ -177,7 +177,7 @@ if __name__ == "__main__":
         text=sample,
         source_type="markdown",
         source_name="fuel_cell_overview.md",
-        source_url="https://github.com/example/pitwall/docs/fuel_cell_overview.md",
+        source_url="https://github.com/example/Apex/docs/fuel_cell_overview.md",
         author="Forze Team",
         date="2024-01-01",
     )

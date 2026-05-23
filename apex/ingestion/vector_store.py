@@ -21,7 +21,7 @@ from ingestion.chunker import Chunk
 from config import CHROMA_DB_PATH, TOP_K_CHUNKS
 
 
-COLLECTION_NAME = "pitwall_docs"
+COLLECTION_NAME = "Apex_docs"
 EMBED_DIM = 384  # match typical sentence-transformer dim
 
 
