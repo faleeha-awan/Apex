@@ -1,4 +1,4 @@
-# Apex ⚡
+# Apex 
 
 **AI-powered knowledge assistant for student motorsport engineering teams.**
 
